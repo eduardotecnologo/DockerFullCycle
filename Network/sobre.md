@@ -52,3 +52,16 @@ bash-5.2# ping ubuntu2
 ❯ docker login -u "username" -p "password" docker.io
 ## Docker Hub
 ❯ docker push eduardodeveloper/laravel
+
+## Node Image
+❯ docker run --rm -it -v $(pwd):/usr/src/app -p 3000:3000 node:15 bash
+❯ npm init -y
+❯ npm install express --save
+
+## Criando a partir da nossa imagem com Dockerfile
+❯ docker build -t eduardodeveloper/hello-express .
+❯ docker run -p 3000:3000 eduardodeveloper/hello-express:latest                ─╯
+App rodando na porta: 3000
+
+## Build Prod
+❯ docker build -t eduardodeveloper/hello-express . -f Dockerfile.prod
