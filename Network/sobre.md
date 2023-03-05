@@ -40,3 +40,15 @@ bash-5.2# ping ubuntu2
 
 ## Instalando framework em um container
 ❯ docker run -it --name php php:7.4-cli bash
+
+## Criando a partir da nossa imagem com Dockerfile
+❯ docker build -t eduardodeveloper/laravel:latest . 
+❯ docker run --rm --name laravel -p 8000:8000 eduardodeveloper/laravel
+
+## Substituindo o CMD
+❯ docker run --rm --name laravel -p 8000:8000 eduardodeveloper/laravel --host=0.0.0.0 --port=8001
+
+## Login Docker Hub
+❯ docker login -u "username" -p "password" docker.io
+## Docker Hub
+❯ docker push eduardodeveloper/laravel
