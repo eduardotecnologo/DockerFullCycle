@@ -65,3 +65,19 @@ App rodando na porta: 3000
 
 ## Build Prod
 ❯ docker build -t eduardodeveloper/hello-express . -f Dockerfile.prod
+
+## Multstage Build | Otimização
+❯ docker build -t eduardodeveloper/laravel:prod . -f Dockerfile.prod
+❯ docker images | grep laravel
+
+## Nginx como proxy reverso
+❯ docker network list
+❯ docker network create laranet
+❯ docker run -d --network laranet --name laravel eduardodeveloper/laravel:prod
+❯ docker run -d --network laranet --name nginx -p 8080:80 eduardodeveloper/nginx:prod
+
+## Up
+❯ docker build -t eduardodeveloper/nginx:prod . -f Dockerfile.prod 
+❯ docker build -t eduardodeveloper/laravel:prod . -f Dockerfile.prod 
+❯ docker run -d --network laranet --name laravel eduardodeveloper/laravel:prod
+❯ docker run -d --network laranet --name nginx -p 8080:80 eduardodeveloper/nginx:prod❯ docker run -d --network laranet --name nginx -p 8080:80 eduardodeveloper/nginx:prod❯ docker run -d --network laranet --name nginx -p 8080:80 eduardodeveloper/nginx:prod❯ docker run -d --network laranet --name nginx -p 8080:80 eduardodeveloper/nginx:prod❯ docker run -d --network laranet --name nginx -p 8080:80 eduardodeveloper/nginx:prod❯ docker run -d --network laranet --name nginx -p 8080:80 eduardodeveloper/nginx:prod❯ docker run -d --network laranet --name nginx -p 8080:80 eduardodeveloper/nginx:prod❯ docker run -d --network laranet --name nginx -p 8080:80 eduardodeveloper/nginx:prod❯ docker run -d --network laranet --name nginx -p 8080:80 eduardodeveloper/nginx:prod
