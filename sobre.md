@@ -80,4 +80,14 @@ App rodando na porta: 3000
 ❯ docker build -t eduardodeveloper/nginx:prod . -f Dockerfile.prod 
 ❯ docker build -t eduardodeveloper/laravel:prod . -f Dockerfile.prod 
 ❯ docker run -d --network laranet --name laravel eduardodeveloper/laravel:prod
-❯ docker run -d --network laranet --name nginx -p 8080:80 eduardodeveloper/nginx:prod❯ docker run -d --network laranet --name nginx -p 8080:80 eduardodeveloper/nginx:prod❯ docker run -d --network laranet --name nginx -p 8080:80 eduardodeveloper/nginx:prod❯ docker run -d --network laranet --name nginx -p 8080:80 eduardodeveloper/nginx:prod❯ docker run -d --network laranet --name nginx -p 8080:80 eduardodeveloper/nginx:prod❯ docker run -d --network laranet --name nginx -p 8080:80 eduardodeveloper/nginx:prod❯ docker run -d --network laranet --name nginx -p 8080:80 eduardodeveloper/nginx:prod❯ docker run -d --network laranet --name nginx -p 8080:80 eduardodeveloper/nginx:prod❯ docker run -d --network laranet --name nginx -p 8080:80 eduardodeveloper/nginx:prod
+❯ docker run -d --network laranet --name nginx -p 8080:80 eduardodeveloper/nginx:prod
+
+## Remove all container
+
+❯ docker rm $(docker ps -a -q) -f                                             ─╯
+d2495852b505
+ade74e8c034e
+ea6409a11239
+e4aa463b8841
+793e3ff5ac6b
+b2f64352eb96
